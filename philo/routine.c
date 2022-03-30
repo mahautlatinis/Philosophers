@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   routine.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: malatini <malatini@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mahautlatinis <mahautlatinis@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/29 18:25:59 by malatini          #+#    #+#             */
-/*   Updated: 2021/08/28 16:31:16 by malatini         ###   ########.fr       */
+/*   Updated: 2022/03/30 18:15:35 by mahautlatin      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -112,10 +112,8 @@ void	*give_actions(void *philo)
 int	launch_threads(t_mem *mem)
 {
 	int	i;
-	int	stop;
 
 	i = 0;
-	stop = 0;
 	while (i < mem->number_of_philosophers)
 	{
 		pthread_create(&mem->philos_threads[i], NULL,
