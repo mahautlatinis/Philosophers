@@ -1,4 +1,12 @@
-# Philosophers
+# philosophers 📚
+
+- Actual Status : validated.
+- Result        : 100% (validated 28/08/2O22)
+
+[![forthebadge](https://forthebadge.com/images/badges/made-with-c.svg)](https://forthebadge.com)
+[![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com)
+
+![Alt text](/philo.mov?raw=true "Test")
 
 Eating, thinking, sleeping
 
