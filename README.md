@@ -3,10 +3,11 @@
 - Actual Status : validated.
 - Result        : 100% (validated 28/08/2022)
 
+<img src="https://github.com/42cursus/Philosophers/blob/master/philosophers.gif" width="80%">
+
 [![forthebadge](https://forthebadge.com/images/badges/made-with-c.svg)](https://forthebadge.com)
 [![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com)
 
-![Alt text](/philo.png?raw=true "Test")
 
 Eating, thinking, sleeping
 
