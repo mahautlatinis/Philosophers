@@ -6,16 +6,11 @@
 /*   By: mahautlatinis <mahautlatinis@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/29 18:25:59 by malatini          #+#    #+#             */
-/*   Updated: 2022/03/30 18:15:35 by mahautlatin      ###   ########.fr       */
+/*   Updated: 2023/10/13 18:51:33 by mahautlatin      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "./philosophers.h"
-
-/*
-** Fonction qui va checker en permanence en parrelele des threads si le
-** temps est depasse pour chaque philo et tuer le philo le cas echeant.
-*/
+#include <philosophers.h>
 
 int	sub_check(t_mem *m, t_philo *p, long unsigned int t, long unsigned int ltl)
 {
@@ -55,9 +50,6 @@ int	check_death(t_mem	*mem, int	*stop)
 	return (1);
 }
 
-/*
-** Fontion de la routine, lock des mutex, protection des messages d'erreurs.
-*/
 int	do_routine(t_mem *mem, t_philo *philo, int *stop)
 {
 	pthread_mutex_lock(philo->fork_r);
@@ -80,10 +72,6 @@ int	do_routine(t_mem *mem, t_philo *philo, int *stop)
 	return (1);
 }
 
-/*
-** Fonction va permettre de boucler sur la routine et de tout arreter
-** si mort s'en est suivie.
-*/
 void	*give_actions(void *philo)
 {
 	t_philo	*not_void;
@@ -105,10 +93,6 @@ void	*give_actions(void *philo)
 	return (NULL);
 }
 
-/*
-** Fonction permettant de lancer les x nombres de philos
-** et de les "lancer" pour qu'il puissent effectuer leur routine.
-*/
 int	launch_threads(t_mem *mem)
 {
 	int	i;

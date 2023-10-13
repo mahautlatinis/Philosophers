@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   check_args.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: malatini <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: mahautlatinis <mahautlatinis@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/29 18:22:27 by malatini          #+#    #+#             */
-/*   Updated: 2021/07/21 09:50:20 by malatini         ###   ########.fr       */
+/*   Updated: 2023/10/13 18:51:01 by mahautlatin      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "./philosophers.h"
+#include <philosophers.h>
 
 int	save_args_bis(int argc, char **argv, t_mem *mem, int *i)
 {
@@ -40,10 +40,6 @@ int	save_args_bis(int argc, char **argv, t_mem *mem, int *i)
 	return (1);
 }
 
-/*
-** Permet d'enregistrer les arguments du main pour les utiliser durant
-** le programme.
-*/
 int	save_args(int argc, char **argv, t_mem *mem)
 {
 	int	i;
@@ -72,10 +68,6 @@ int	save_args(int argc, char **argv, t_mem *mem)
 	return (ret);
 }
 
-/*
-** Permet de verifier que les arguments du main sont correctes.
-** Trop de philos peut faire planter l'ordinateur.
-*/
 int	check_args(t_mem *mem)
 {
 	if (mem->number_of_philosophers > 200)
