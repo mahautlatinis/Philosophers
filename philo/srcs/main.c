@@ -6,13 +6,13 @@
 /*   By: mahautlatinis <mahautlatinis@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/13 18:37:17 by mahautlatin       #+#    #+#             */
-/*   Updated: 2023/10/13 18:52:45 by mahautlatin      ###   ########.fr       */
+/*   Updated: 2023/10/13 18:54:47 by mahautlatin      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <philosophers.h>
 
-int main(int argc, char **argv)
+int	main(int argc, char **argv)
 {
 	t_mem			mem;
 	pthread_mutex_t	m_stop;
