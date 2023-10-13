@@ -6,11 +6,11 @@
 /*   By: mahautlatinis <mahautlatinis@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/30 13:44:49 by malatini          #+#    #+#             */
-/*   Updated: 2023/10/13 18:31:49 by mahautlatin      ###   ########.fr       */
+/*   Updated: 2023/10/13 18:52:59 by mahautlatin      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/philosophers.h"
+#include <philosophers.h>
 
 void	take_time_doing(t_mem *mem, long unsigned int time_to_spend)
 {

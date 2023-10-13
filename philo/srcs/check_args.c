@@ -6,11 +6,11 @@
 /*   By: mahautlatinis <mahautlatinis@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/29 18:22:27 by malatini          #+#    #+#             */
-/*   Updated: 2023/10/13 18:31:27 by mahautlatin      ###   ########.fr       */
+/*   Updated: 2023/10/13 18:51:01 by mahautlatin      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/philosophers.h"
+#include <philosophers.h>
 
 int	save_args_bis(int argc, char **argv, t_mem *mem, int *i)
 {

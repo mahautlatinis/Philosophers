@@ -6,12 +6,12 @@
 /*   By: mahautlatinis <mahautlatinis@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/19 14:32:21 by malatini          #+#    #+#             */
-/*   Updated: 2023/10/13 18:31:43 by mahautlatin      ###   ########.fr       */
+/*   Updated: 2023/10/13 18:51:30 by mahautlatin      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/philosophers.h"
-#include "../include/ft_printf.h"
+#include <philosophers.h>
+#include <ft_printf.h>
 
 void	print_message_safe(t_philo *philo, t_mem *mem, char *str, int *stop)
 {

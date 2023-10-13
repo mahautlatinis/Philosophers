@@ -6,11 +6,11 @@
 /*   By: mahautlatinis <mahautlatinis@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/29 17:54:50 by malatini          #+#    #+#             */
-/*   Updated: 2023/10/13 18:31:21 by mahautlatin      ###   ########.fr       */
+/*   Updated: 2023/10/13 18:50:24 by mahautlatin      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/philosophers.h"
+#include <philosophers.h>
 
 int	ft_isdigit(int c)
 {

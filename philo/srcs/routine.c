@@ -6,11 +6,11 @@
 /*   By: mahautlatinis <mahautlatinis@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/29 18:25:59 by malatini          #+#    #+#             */
-/*   Updated: 2023/10/13 18:31:46 by mahautlatin      ###   ########.fr       */
+/*   Updated: 2023/10/13 18:51:33 by mahautlatin      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/philosophers.h"
+#include <philosophers.h>
 
 int	sub_check(t_mem *m, t_philo *p, long unsigned int t, long unsigned int ltl)
 {

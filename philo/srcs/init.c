@@ -6,11 +6,11 @@
 /*   By: mahautlatinis <mahautlatinis@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/20 09:22:14 by malatini          #+#    #+#             */
-/*   Updated: 2023/10/13 18:31:31 by mahautlatin      ###   ########.fr       */
+/*   Updated: 2023/10/13 18:51:05 by mahautlatin      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/philosophers.h"
+#include <philosophers.h>
 
 int	init_args(int argc, char **argv, t_mem *mem)
 {

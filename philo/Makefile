@@ -6,7 +6,7 @@
 #    By: mahautlatinis <mahautlatinis@student.42    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/06/29 14:14:41 by malatini          #+#    #+#              #
-#    Updated: 2023/10/13 18:42:42 by mahautlatin      ###   ########.fr        #
+#    Updated: 2023/10/13 18:50:43 by mahautlatin      ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -35,10 +35,10 @@ else
 endif
 
 .c.o:
-			$(CC) $(CFLAGS) -c $< -o ${<:.c=.o}
+			$(CC) $(CFLAGS) -c $< -o ${<:.c=.o} -I./include/
 
 $(NAME):	$(OBJ)
-			$(CC) $(CFLAGS) -o $(NAME) $(OBJ) -L./libftprintf/ -lftprintf
+			$(CC) $(CFLAGS) -o $(NAME) $(OBJ) -I./include/ -L./libftprintf/ -lftprintf
 
 all: 		$(NAME)
 

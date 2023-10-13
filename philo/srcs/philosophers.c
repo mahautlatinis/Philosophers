@@ -6,11 +6,11 @@
 /*   By: mahautlatinis <mahautlatinis@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/29 17:38:37 by malatini          #+#    #+#             */
-/*   Updated: 2023/10/13 18:37:12 by mahautlatin      ###   ########.fr       */
+/*   Updated: 2023/10/13 18:51:12 by mahautlatin      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/philosophers.h"
+#include <philosophers.h>
 
 void	manage_only_one_philo(t_mem *mem)
 {
