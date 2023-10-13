@@ -3,18 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   timer.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: malatini <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: mahautlatinis <mahautlatinis@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/30 13:44:49 by malatini          #+#    #+#             */
-/*   Updated: 2021/07/20 14:36:52 by malatini         ###   ########.fr       */
+/*   Updated: 2023/10/13 18:31:49 by mahautlatin      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "./philosophers.h"
+#include "../include/philosophers.h"
 
-/*
-** Attend le temps necessaire (a l'action) passé en paramètre.
-*/
 void	take_time_doing(t_mem *mem, long unsigned int time_to_spend)
 {
 	unsigned int	start;
@@ -34,11 +31,9 @@ void	take_time_doing(t_mem *mem, long unsigned int time_to_spend)
 				break ;
 		}
 	}
+	return ;
 }
 
-/*
-** Retoune le temps passé depuis le debut du chrono.
-*/
 long unsigned int	get_time(t_mem *mem)
 {
 	long unsigned int	time_spent;
@@ -49,13 +44,11 @@ long unsigned int	get_time(t_mem *mem)
 	return (time_spent);
 }
 
-/*
-** Lance le chrono
-*/
 void	init_time(t_mem *mem)
 {
 	struct timeval	t;
 
 	gettimeofday(&t, NULL);
 	mem->time_first = t.tv_sec * 1000 + t.tv_usec / 1000;
+	return ;
 }

@@ -6,23 +6,24 @@
 /*   By: mahautlatinis <mahautlatinis@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/29 17:37:13 by malatini          #+#    #+#             */
-/*   Updated: 2023/10/09 21:25:28 by mahautlatin      ###   ########.fr       */
+/*   Updated: 2023/10/13 18:34:08 by mahautlatin      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PHILOSOPHERS_H
 # define PHILOSOPHERS_H
 
-# include <stdio.h>
-# include <unistd.h>
-# include <stdlib.h>
-# include <string.h>
-# include <sys/time.h>
 # include <pthread.h>
 # include <stdbool.h>
+# include <stdio.h>
+# include <stdlib.h>
+# include <string.h>
 # include <sys/errno.h>
-# define ERROR -1
-# define SUCCESS 1
+# include <sys/time.h>
+# include <unistd.h>
+
+# define ERROR 			-1
+# define SUCCESS 		1
 
 typedef struct s_philo
 {
@@ -55,36 +56,35 @@ typedef struct s_mem
 
 typedef struct s_atoi_var
 {
-	long	i;
-	long	max;
-	long	sign;
-	long	result;
+	long				i;
+	long				max;
+	long				sign;
+	long				result;
 }				t_atoi_var;
 
-int					ft_isdigit(int c);
-long				ft_atoi(char *str);
-void				print_args(t_mem *mem);
-int					save_args(int argc, char **argv, t_mem *mem);
-void				*give_actions(void *arg);
-void				init_time(t_mem *mem);
-void				take_time_doing(t_mem *mem, long unsigned int t);
-void				init_mem(t_mem *mem);
-long unsigned int	get_time(t_mem *mem);
-void				manage_only_one_philo(t_mem *mem);
-int					init_philo_thread(t_mem *mem);
-int					launch_threads(t_mem *mem);
-int					check_args(t_mem *mem);
-int					init_philos(t_mem *mem);
-int					check_death(t_mem	*mem, int *stop);
-int					init_all_mutex(t_mem *mem);
-void				print_message_safe(t_philo *philo, t_mem *mem,
-						char *str, int *stop);
-void				print_args(t_mem *mem);
-int					init_args(int argc, char **argv, t_mem *mem);
-int					manage_threads(t_mem *mem);
-int					ft_isalpha(int c);
-int					save_args_bis(int ac, char **av, t_mem *m, int *i);
-int					check_stop(t_mem *mem, int *stop);
-void				manage_only_one_philo(t_mem *mem);
+int						check_args(t_mem *mem);
+int						check_death(t_mem	*mem, int *stop);
+int						check_stop(t_mem *mem, int *stop);
+int						ft_isalpha(int c);
+int						ft_isdigit(int c);
+int						init_all_mutex(t_mem *mem);
+int						init_args(int argc, char **argv, t_mem *mem);
+int						init_philo_thread(t_mem *mem);
+int						init_philos(t_mem *mem);
+int						launch_threads(t_mem *mem);
+int						manage_threads(t_mem *mem);
+int						save_args_bis(int ac, char **av, t_mem *m, int *i);
+int						save_args(int argc, char **argv, t_mem *mem);
+long					ft_atoi(char *str);
+long unsigned int		get_time(t_mem *mem);
+void					*give_actions(void *arg);
+void					init_mem(t_mem *mem);
+void					init_time(t_mem *mem);
+void					manage_only_one_philo(t_mem *mem);
+void					manage_only_one_philo(t_mem *mem);
+void					print_args(t_mem *mem);
+void					print_message_safe(t_philo *philo,
+							t_mem *mem, char *str, int *stop);
+void					take_time_doing(t_mem *mem, long unsigned int t);
 
 #endif

@@ -3,46 +3,53 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: malatini <marvin@42.fr>                    +#+  +:+       +#+         #
+#    By: mahautlatinis <mahautlatinis@student.42    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/06/29 14:14:41 by malatini          #+#    #+#              #
-#    Updated: 2021/07/23 18:10:31 by malatini         ###   ########.fr        #
+#    Updated: 2023/10/13 18:42:42 by mahautlatin      ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME	=	philo
 CC		=	clang
 OBJDIR	=	objects
-SRC		=	philosophers.c atoi.c print.c routine.c check_args.c timer.c init.c
-OBJ 	=	$(addprefix $(OBJDIR)/, $(SRC:.c=.o))
+
+SRC		=	./srcs/main.c \
+ 			./srcs/philosophers.c \
+            ./srcs/atoi.c \
+            ./srcs/print.c \
+            ./srcs/routine.c \
+            ./srcs/check_args.c \
+            ./srcs/timer.c \
+            ./srcs/init.c 
+
+OBJ 	=	$(SRC:.c=.o)
 CFLAGS	=	-Wall -Wextra -Werror -pthread
 
 ifneq (,$(findstring xterm,${TERM}))
-	GREEN := $(shell tput -Txterm setaf 2)
-	RESET := $(shell tput -Txterm sgr0)
+			GREEN := $(shell tput -Txterm setaf 2)
+			RESET := $(shell tput -Txterm sgr0)
 else
-	GREEN := ""
-	RESET := ""
+			GREEN := ""
+			RESET := ""
 endif
 
-all: $(NAME)
+.c.o:
+			$(CC) $(CFLAGS) -c $< -o ${<:.c=.o}
 
-bonus: all
+$(NAME):	$(OBJ)
+			$(CC) $(CFLAGS) -o $(NAME) $(OBJ) -L./libftprintf/ -lftprintf
 
-$(NAME): $(OBJ)
-	@$(CC) $(CFLAGS) $(OBJ) -o $(NAME)
-	@echo "${GREEN}Compilation Done${RESET}"
-
-$(OBJDIR)/%.o: %.c
-	@mkdir -p objects
-	@$(CC) $(CFLAGS) -c $< -o $@
+all: 		$(NAME)
 
 clean:
-	@rm -f $(OBJ)
+			@rm -rf $(OBJ)
 
-fclean: clean
-	@rm -f $(NAME)
+fclean: 	clean
+			@rm -rf $(NAME)
 
-re: fclean all
+re: 		fclean all
 
-.PHONY: clean fclean all re bonus
+bonus: 		all
+
+.PHONY: 	clean fclean all re bonus

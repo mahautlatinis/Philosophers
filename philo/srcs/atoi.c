@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   utils0.c                                           :+:      :+:    :+:   */
+/*   atoi.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: malatini <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: mahautlatinis <mahautlatinis@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/29 17:54:50 by malatini          #+#    #+#             */
-/*   Updated: 2021/07/21 09:49:41 by malatini         ###   ########.fr       */
+/*   Updated: 2023/10/13 18:31:21 by mahautlatin      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "./philosophers.h"
+#include "../include/philosophers.h"
 
 int	ft_isdigit(int c)
 {

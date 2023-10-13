@@ -3,19 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   init.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: malatini <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: mahautlatinis <mahautlatinis@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/20 09:22:14 by malatini          #+#    #+#             */
-/*   Updated: 2021/07/20 14:30:56 by malatini         ###   ########.fr       */
+/*   Updated: 2023/10/13 18:31:31 by mahautlatin      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "./philosophers.h"
+#include "../include/philosophers.h"
 
-/*
-** Initialise la structure principale et verifie les arguments.
-** Gere le cas particulier de 1 seul philo.
-*/
 int	init_args(int argc, char **argv, t_mem *mem)
 {
 	if (argc < 5 || argc > 6)
@@ -33,9 +29,6 @@ int	init_args(int argc, char **argv, t_mem *mem)
 	return (1);
 }
 
-/*
-** Initialise le tableau de philos pour ne pas avoir de garbage value.
-*/
 int	init_philos(t_mem *mem)
 {
 	int	i;
@@ -52,9 +45,6 @@ int	init_philos(t_mem *mem)
 	return (SUCCESS);
 }
 
-/*
-** Initialise la structure principale pour eviter des garbages values.
-*/
 void	init_mem(t_mem *mem)
 {
 	mem->number_of_philosophers = 0;
@@ -65,12 +55,9 @@ void	init_mem(t_mem *mem)
 	mem->stop = false;
 	init_time(mem);
 	mem->stop = false;
+	return ;
 }
 
-/*
-** Initialise les mutex, indique les fourchettes droites et gauches pour
-** les philos.
-*/
 int	init_all_mutex(t_mem *mem)
 {
 	int				i;
