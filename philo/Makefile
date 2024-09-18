@@ -24,7 +24,7 @@ SRC		=	./srcs/main.c \
             ./srcs/init.c 
 
 OBJ 	=	$(SRC:.c=.o)
-CFLAGS	=	-Wall -Wextra -Werror -pthread
+CFLAGS	=	-Wall -Wextra -Werror -pthread #-fsanitize=thread for race conditions
 
 ifneq (,$(findstring xterm,${TERM}))
 			GREEN := $(shell tput -Txterm setaf 2)
@@ -35,7 +35,7 @@ else
 endif
 
 .c.o:
-			$(CC) $(CFLAGS) -c $< -o ${<:.c=.o} -I./include/
+			$(CC) $(CFLAGS) -c $< -o $(<:.c=.o) -I./include/
 
 $(NAME):	$(OBJ)
 			$(CC) $(CFLAGS) -o $(NAME) $(OBJ) -I./include/ -L./libftprintf/ -lftprintf
